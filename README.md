@@ -1,1 +1,1 @@
-<p>This is just a practice project which is a cloning of MYNTRA</p>
+<p>This is just a practice project which is a clone of MYNTRA</p>
