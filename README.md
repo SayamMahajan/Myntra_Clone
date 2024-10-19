@@ -1,0 +1,1 @@
+<p>This is just a practice project which is a cloning of MYNTRA</p>
