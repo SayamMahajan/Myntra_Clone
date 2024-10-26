@@ -1,16 +1,20 @@
 let itemContainerElement = document.querySelector('.items-container');
 
-itemContainerElement.innerHTML = `
+let innerHTML = '';
+items.forEach(item => {
+    innerHTML += `
 <div class="item-container">
-                <img class="item-img" src="assets/images/item1.webp" alt="item_image">
-                <div class="rating">4.5 ⭐ | 10.4k</div>
-                <div class="company-name">Apple</div>
-                <div class="item-name">iPhone</div>
-                <div class="price">
-                    <span class="current-price">Rs 50000</span>
-                    <span class="original-price">Rs 70000</span>
-                    <span class="discount">(33% OFF)</span>
-                </div>
-                <button class="btn-add-bag">Add to Bag</button>
+    <img class="item-img" src="assets/images/${item.item_img}.webp" alt="item_image">
+    <div class="rating">${item.rating.item_rating} ⭐ | ${item.rating.item_review}</div>
+    <div class="">${item.company_name}</div>
+    <div class="item-name">${item.item_name}</div>
+    <div class="price">
+        <span class="current-price">Rs ${item.current_price}</span>
+        <span class="original-price">Rs ${item.original_price}</span>
+        <span class="discount">(${item.discount}% OFF)</span>
+    </div>
+    <button class="btn-add-bag">Add to Bag</button>
+</div>`
+})
 
-            </div>`
+itemContainerElement.innerHTML = innerHTML;
